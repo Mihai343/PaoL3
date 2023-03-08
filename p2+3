@@ -1,0 +1,73 @@
+public class Main {
+    public static void main(String[] args) {
+        int n,m,max;
+
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        n=input.nextInt();
+        m=input.nextInt();
+
+        int []a=new int[n];
+        int []b=new int[m];
+        if(m>n)
+            max=m;
+        else max=n;
+        int []c=new int [max];
+        int []d=new int [n+m];
+
+        for(int i=0;i<n;i++)
+        {
+            a[i]=input.nextInt();
+        }
+        for(int i=0;i<m;i++)
+        {
+            b[i]=input.nextInt();
+        }
+        int k=0,l=0;
+        for(int i=0;i<n;i++)
+        {
+            int ok=0;
+            for(int j=0;j<m;j++)
+            {
+
+
+                if(a[i]==b[j])
+                {
+                    c[k]=a[i];
+                    k++;
+                    ok=1;
+                }
+
+
+
+            }
+            if(ok==0) {
+                d[l] = a[i];
+                l++;
+            }
+        }
+    int ok1=0;
+        for(int i=0;i<k;i++) {
+            System.out.println(" "+c[i]);
+        }
+        for(int i=0;i<m;i++) {
+            int ok=0;
+            for (int j = 0; j < n; j++) {
+
+                if(b[i]==a[j])
+                {
+                    ok=1;
+
+                }
+
+            }
+            if(ok==0)
+            {
+                d[l]=b[i];
+                l++;
+            }
+        }
+        for(int i=0;i<l;i++)
+            System.out.println(" "+d[i]);
+
+    }
+    }
