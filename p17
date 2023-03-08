@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        String sir= input.nextLine();
+        int numarVocale=0;
+        for (int i = 0; i < sir.length(); i++) {
+            char caracter = sir.charAt(i);
+            if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
+                numarVocale++;
+            }
+        }
+        System.out.println("nr vocale="+numarVocale);
+    }
+    }
