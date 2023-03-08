@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int n,minim=999999999;
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        n=input.nextInt();
+        int []a=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            a[i]=input.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]<minim)
+            {
+                minim=a[i];
+            }
+        }
+        System.out.println("minim="+minim);
+
+    }
+}
