@@ -1,0 +1,37 @@
+import java.io.*;
+public class Main {
+
+    public static void main(String[] args) {
+        FileReader f = null;
+        int c;
+        String buf = "";
+        try{
+            f = new FileReader("C:\\Users\\mihai\\IdeaProjects\\untitled\\src\\fisier.txt"); //NU MERGEA DOAR CU NUMELE NUSH DC
+            while ((c = f.read()) != -1)
+            //cat timp se mai pot citi caractere din fisier
+            {
+
+                if(Character.isUpperCase(c))
+                {
+                    c = Character.toLowerCase(c);
+                }
+                else if (Character.isLowerCase(c)) {
+                    c = Character.toUpperCase(c);}
+                buf = buf + (char)c;
+            //se citesc caracterele din fisier si se pun in buf
+            }
+            System.out.println(buf);
+            f.close(); // se inchide fisierul
+
+        }
+        catch (FileNotFoundException e) { // exceptie : nu s-a gasit fisierul
+            System.out.println("Fisierul nu a fost gasit");
+        }
+        catch (IOException e) //eroare la citirea din fisier
+        {
+            System.out.println("Eroare la citire");
+        }
+
+
+    }
+}
