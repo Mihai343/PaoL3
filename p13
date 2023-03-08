@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        int count=0;
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        String str= input.nextLine();
+        String str1= input.nextLine();
+        int index = str.indexOf(str1);
+
+        while (index != -1) {
+            count++;
+            index = str.indexOf(str1, index + 1);
+        }
+        System.out.println("count="+count);
+    }
+    }
