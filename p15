@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        String str= input.nextLine();
+        int index = str.indexOf(' ');
+        int index1=-1;
+        while (index != -1) {
+            String str1=str.substring(index1+1,index);
+            index1=index;
+            index = str.indexOf(' ', index + 1);
+
+        }
+    }
+    }
